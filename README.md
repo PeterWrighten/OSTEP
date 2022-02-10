@@ -1,3 +1,3 @@
-# Practice for thread programming
+# OSTEP
 
-Some practice for thread programming in my college course.
+Some practice for thread programming in my college course and OSTEP.
