@@ -1,0 +1,10 @@
+[package]
+name = "async_prac"
+version = "0.1.0"
+edition = "2021"
+authors = ["Zepeng Zhang <peterwrighten@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "*"
