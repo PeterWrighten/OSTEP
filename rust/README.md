@@ -26,3 +26,9 @@
 - `futures::executor::block_on` 
 `block_on` blocks current thread until `Future`'s runtime completed.
 - `.await` would not block current thread, it just asynchronously wait `Future`'s accompliment.
+
+4. `Future` trait
+
+- `Future` trait is the essence of `Rust Async` programming.
+- it is a async computation, could produce a value.
+- The type which implemented `Future` means a currently unavailable value.
