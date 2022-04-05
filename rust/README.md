@@ -32,3 +32,12 @@
 - `Future` trait is the essence of `Rust Async` programming.
 - it is a async computation, could produce a value.
 - The type which implemented `Future` means a currently unavailable value.
+- `executor`, `waker`
+- `async` and `await`
+
+5. `Pin<'a, T>` trait
+- `Pin`: Prevent move-after-ref.
+- `T: Unpin`: `Pin<'a, T>` is equivalent to `&'a mut T`
+- if `T: !Unpin`, `&mut T ` could convey to `Pin<'a, T>`, but need `unsafe` operation(pin in stack)
+
+6. `Stream` trait
