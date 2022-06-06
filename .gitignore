@@ -36,3 +36,17 @@
 **/target
 
 **/Cargo.lock
+
+*.aux
+
+*.log
+
+*.pdf
+
+*.toc
+
+*.gvpr
+
+*.dot
+
+*.graphviz

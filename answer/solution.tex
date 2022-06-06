@@ -1,0 +1,37 @@
+\documentclass{report}
+\title{Solution of OSTEP}
+\author{Peter Wright}
+\date{\today}
+\usepackage{amsmath}
+\usepackage[pdf, singlefile]{graphviz}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\part{Virtualization}
+\part{Concurrency}
+\part{Persistence}
+\chapter{File System Implementation}
+\section{File Organization: Inode}
+\subsection{The Multi-Level Index}
+\paragraph{Problem 1} Counting Triple Indirect Pointers 
+\par
+As we see, triple indirect pointer could be depicted as following:
+\par
+\digraph[scale = 0.7] {figure1} {
+    init [shape = box];
+    init -> first0 -> second0;
+    init -> first1;
+    first1 -> second1;
+    second0 -> third0;
+    etc [shape = record, style = filled, color = "red", fillcolor = "yellow", fontcolor = "green"];
+    second1 -> etc [color = "red", label = "more"];    
+}
+\par
+
+According to above, the number of blocks to accommodate triple indirect pointers is $(12 + (\frac{4 KB}{4 B}) + (\frac{4 KB}{4 B})^2 + (\frac{4 KB}{4 B})^3)$, and size of them is $(12 + (\frac{4 KB}{4 B}) + (\frac{4 KB}{4 B})^2 + (\frac{4 KB}{4 B})^3) \times 4 KB$.
+
+                
+
+
+\end{document}
