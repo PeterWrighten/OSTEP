@@ -1,23 +1,25 @@
-#include <string.h>
-#include <sys/wait.h>
 #include <stdio.h>
-
-void main(void) {
+#include <unistd.h>
+#include <sys/wait.h>
+#include <stdlib.h>
+#include <string.h>
+    
+int main(void) {
     int i, pid, p[2], status;
     char buffer[20];
 
     pipe(p);
-    if(pid = fork() == 0) {
+    pid = fork();
+    if(pid == 0) {
         close(p[1]);
         if((i = read(p[0], buffer, 20)) == -1) {
             printf("child failed\n");
-            _exit(1);
+            exit(1);
         }
         printf("%s OK! I received your message.\n", buffer);
-        _exit(0);
+        exit(0);
     }
     close(p[0]);
-    write(p[1]);
+    write(p[1], buffer, 20);
     wait(&status);
-
 }
