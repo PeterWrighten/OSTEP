@@ -20,7 +20,7 @@
 - `async` code are supported by `async runtimes`.
 - Rust does not allow declare `async` in trait.
 
-3. Intro to `aync` and `swait`
+3. Intro to `aync` and `await`
 
 - `async` transforms a chunk of code into a state machine which implemented `Future trait`.
 - `futures::executor::block_on` 
